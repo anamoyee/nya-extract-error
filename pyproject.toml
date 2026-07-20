@@ -1,0 +1,18 @@
+[project]
+name = 'nya-extract-error'
+dynamic = ['version']
+description = 'Provide helpful functions to convert python Exceptions and tracebacks into str. Ported from my own package, tcrutils.'
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+# [project.scripts]
+# nya_extract_error = "nya_extract_error.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/nya_extract_error/_version.py"
+pattern = '__version__(?:: str)? *= *\"(?P<version>[^\"]+)\"'
